@@ -6,12 +6,13 @@ fetch(api).then( resp =>{
     return resp.json()
 }).then(data =>{
     
-    let info = data.bpi.map()
+    let info = data.bpi
+    content.innerHTML = info.map(x => getHtml(x)).join('')
     var time = data.time   
     
 return console.log(info)
 })
 
 function getHtml(){
-
+return ` `
 }
